@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potato Leaf Disease Detection</title>
+    <style>
+        /* Base Styling */
+        body {  
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-image: url(./potata\ image\ 9.jpg); /* Replace with your background image path */
+            background-size: cover; /* Ensures the background covers the entire header */
+            background-position: center; /* Centers the background image */
+            color: #fff;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #fff;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            color: #4b4b4b;
+            font-size: 2.2rem;
+        }
+
+        .hero p {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .hero button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .hero button:hover {
+            background-color: #2980b9;
+        }
+
+        .hero img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        /* Steps Section */
+        .steps-section {
+            background-color: #f9f9f9;
+            padding: 60px 20px;
+        }
+
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+
+        .step-box {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 40px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .step-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .step-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .step-box p {
+            color: #777;
+        }
+
+        /* Features Section */
+        .features-section {
+            background-color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .features-section {
+    background-image: url(./potato\ image\ 1.jpg); 
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    text-align: center;
+    color: #fff; 
+         }
+
+        .feature-box {
+    background-color: rgba(236, 240, 241, 0.8); /* Slightly transparent background */
+    border-radius: 10px;
+    padding: 30px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    min-width: 280px;
+        }
+        .features-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .feature-box {
+            background-color: #ecf0f1;
+            border-radius: 10px;
+            padding: 30px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            min-width: 280px;
+        }
+
+        .feature-box h3 {
+            color: #3498db;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .feature-box p {
+            color: #666;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: #f2f2f2;
+            padding: 60px 20px;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-item h3 {
+            font-size: 1.3rem;
+            color: #333;
+        }
+
+        .faq-item p {
+            color: #666;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 60px 20px;
+            background-color: #fff;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #e9f7ef;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .contact-form textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .contact-form button {
+            background-color: #5a8f7b;
+            color: #fff;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #4b7a67;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #5a8f7b;
+            color: #fff;
+            text-align: center;
+            padding: 30px;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .features-container,
+            .steps-container {
+                flex-direction: column;
+            }
+
+            .feature-box {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Potato Leaf Disease Detection</h1>
+        <p>Using K-Means Clustering and Machine Learning for Efficient Diagnosis</p>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Transforming Agriculture with Technology</h2>
+        <img src="potato image2.jpg" alt="potato image">
+        <p>Detect potato leaf diseases quickly and accurately using advanced image processing techniques.</p>
+        <button onclick="document.getElementById('contact').scrollIntoView();">Get Started Now</button>
+    </section>
+
+    <!-- Steps Section -->
+    <section class="steps-section">
+        <h2 style="text-align: center;">How It Works</h2>
+        <div class="steps-container">
+            <div class="step-box">
+                <h3>Step 1: Upload Image</h3>
+                <p>Upload a photo of the affected tomato leaf for analysis.</p>
+            </div>
+            <div class="step-box">
+                <h3>Step 2: Image Processing</h3>
+                <p>The system processes the image using machine learning algorithms.</p>
+            </div>
+            <div class="step-box">
+                <h3>Step 3: Diagnosis</h3>
+                <p>Receive a diagnosis along with treatment suggestions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <h2>Key Features</h2>
+        <div class="features-container">
+            <div class="feature-box">
+                <h3>High Accuracy</h3>
+                <p>Achieve 98.97% accuracy using cutting-edge algorithms for disease detection.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Fast Processing</h3>
+                <p>Get results in seconds, much faster than traditional methods.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Easy to Use</h3>
+                <p>A simple interface designed for seamless user experience.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2 style="text-align: center;">Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h3>Q1: How accurate is this tool?</h3>
+            <p>A: Our tool achieves a diagnostic accuracy of up to 98.97%.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Q2: How long does it take to process an image?</h3>
+            <p>A: The diagnosis process typically takes less than 30 seconds.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Q3: What kind of image formats are supported?</h3>
+            <p>A: You can upload images in JPG or PNG format for processing.</p>
+        </div>
+    </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2 style="text-align: center;">Contact Us</h2>
+            <form class="contact-form" onsubmit="return sendMessage();">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+    
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    
+        <!-- Footer Section -->
+        <footer>
+            <p>&copy; 2024 Potato Leaf Disease Detection Project. All rights reserved.</p>
+        </footer>
+    
+        <script>
+            // JavaScript for handling form submission
+            function sendMessage() {
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+    
+                alert(`Message sent!\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`);
+                document.querySelector('.contact-form').reset();
+                return false; // Prevent form from submitting to server
+            }
+        </script>
+    </body>
+    
+    </html>
+    
+
+
+
+
+
+
+
+
+       
